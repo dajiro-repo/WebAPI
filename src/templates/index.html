@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="/static/style.css">
+    <title>table data</title>
+</head>
+<body>
+<div class="button_wrapper">
+    <a href="http://127.0.0.1:8000/v1/tanuki/" download = "test.csv" class="btn btn--blue">csvをdownload</a>
+</div>
+<table>
+    <tr>
+        <th>ID</th>
+        <th>名前</th>
+        <th>年齢</th>
+        <th>種類</th>
+    </tr>
+    {% for t in tanuki  %}
+    <tr>
+        <td>{{ t.id }}</td>
+        <td>{{ t.name }}</td>
+        <td>{{ t.age }}</td>
+        <td>{{ t.type }}</td>
+    </tr>
+    {% endfor  %}
+</table>
+</body>
+</html>
